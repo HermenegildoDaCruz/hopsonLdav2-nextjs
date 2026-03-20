@@ -25,7 +25,7 @@ export default function Navbar() {
           <Image src="/favicon.png" alt="Hopson Logo" width={44} height={44} priority />
           <div className={styles.logoText}>
             Hopson
-            <span>Segurança &amp; Serviços</span>
+            <span>Segurança &amp; Prestação de Serviços</span>
           </div>
         </Link>
 

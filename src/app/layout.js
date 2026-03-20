@@ -1,7 +1,8 @@
 import { Barlow_Condensed, Barlow } from 'next/font/google';
 import ScrollRevealProvider from '@/components/ScrollRevealProvider/ScrollRevealProvider';
 import '@/styles/variables.css';
-import styles from '@/styles/globals.module.css';
+import styles from '@/styles/layout.module.css';
+import '@/styles/globals.css'; 
 
 const barlowCondensed = Barlow_Condensed({
   subsets: ['latin'],

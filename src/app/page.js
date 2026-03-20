@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <main>
       <Navbar />
-      <MobileMenu />
+      {/* <MobileMenu /> */}
       <Hero />
       <Ticker />
       <About />
