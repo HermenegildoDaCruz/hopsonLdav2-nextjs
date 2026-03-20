@@ -18,3 +18,8 @@
   line-height: 1.6;
   overflow-x: hidden;
 }
+
+section:not(section#hero)
+{
+  padding: 2rem 6rem;
+}
