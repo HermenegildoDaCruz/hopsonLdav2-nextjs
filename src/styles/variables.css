@@ -1,0 +1,122 @@
+/* =============================================================
+   DESIGN TOKENS — hopson
+   Importar no global CSS ou layout raiz
+   ============================================================= */
+
+:root {
+  /* --- Paleta Principal --- */
+  --black:      #0a0a0a;
+  --black-2:    #111111;
+  --black-3:    #1a1a1a;
+  --black-4:    #222222;
+
+  --grey-dark:  #2e2e2e;
+  --grey-mid:   #555555;
+  --grey-light: #888888;
+  --grey-border:#2a2a2a;
+
+  --white:      #ffffff;
+  --white-off:  #f5f4f0;
+
+  --brown:      #7b5c3a;
+  --brown-light:#a07a50;
+  --brown-dark: #5a3f24;
+
+  --gold:       #c9a84c;
+  --gold-light: #e8c97a;
+  --gold-dark:  #a8862e;
+
+  /* --- Tipografia --- */
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body:    'Barlow', sans-serif;
+
+  /* --- Layout --- */
+  --nav-h:        7rem;
+  --section-pad:  10rem 0;
+  --radius:       0.4rem;
+  --radius-lg:    0.8rem;
+
+  /* --- Efeitos --- */
+  --shadow:       0 2px 40px rgba(0,0,0,0.5);
+  --transition:   0.25s ease;
+}
+
+/* Dark mode (padrão) */
+:root {
+  --bg:       var(--black);
+  --bg-card:  var(--black-3);
+  --text:     var(--white);
+  --text-sub: #aaaaaa;
+  --border:   var(--grey-border);
+}
+
+/* Light mode baseado na preferência do dispositivo */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg:       var(--white-off);
+    --bg-card:  #ffffff;
+    --text:     #111111;
+    --text-sub: #444444;
+    --border:   #dddddd;
+  }
+}
+
+/* --- Reset Global --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1.6rem;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img  { max-width: 100%; display: block; }
+a    { color: inherit; text-decoration: none; }
+ul   { list-style: none; }
+
+/* --- Ionicons — tamanho base e alinhamento vertical --- */
+ion-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+/* --- Utilitários globais --- */
+.container {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 2.4rem;
+}
+
+/* Reveal animation (JS toggled) */
+.reveal,
+.reveal-left,
+.reveal-right {
+  opacity: 0;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal       { transform: translateY(3rem); }
+.reveal-left  { transform: translateX(-3rem); }
+.reveal-right { transform: translateX(3rem); }
+
+.reveal.visible,
+.reveal-left.visible,
+.reveal-right.visible {
+  opacity: 1;
+  transform: translate(0);
+}

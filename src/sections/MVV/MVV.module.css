@@ -1,0 +1,106 @@
+.mvv { padding: var(--section-pad); }
+
+.label {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.6rem;
+}
+.label::before {
+  content: '';
+  display: block;
+  width: 3rem; height: 2px;
+  background: var(--gold);
+}
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(3.6rem, 5vw, 6rem);
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+.gold { color: var(--gold); }
+
+/* Grid — valores ocupa coluna full na última linha se necessário */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr;
+  gap: 3.2rem;
+  margin-top: 5.6rem;
+}
+
+/* Card */
+.card {
+  padding: 4rem;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  border-color: var(--gold);
+  box-shadow: 0 0 40px rgba(201,168,76,0.08);
+}
+
+.cardLabel {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.6rem;
+}
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 3.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 2.4rem;
+}
+.cardText {
+  font-size: 1.5rem;
+  color: var(--text-sub);
+  line-height: 1.8;
+}
+
+/* Lista de valores */
+.valuesList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  margin-top: 0.8rem;
+}
+.valueItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  font-size: 1.4rem;
+  color: var(--text-sub);
+}
+.valueItem::before {
+  content: '▸';
+  color: var(--gold);
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+/* Responsivo */
+@media (max-width: 75em) {
+  .grid { grid-template-columns: 1fr 1fr; }
+  .grid > :last-child { grid-column: 1 / -1; }
+  .valuesList { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 48em) {
+  .grid { grid-template-columns: 1fr; }
+  .grid > :last-child { grid-column: auto; }
+  .valuesList { grid-template-columns: 1fr 1fr; }
+}

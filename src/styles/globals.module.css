@@ -1,0 +1,20 @@
+/* =============================================================
+   RESET & BASE
+   ============================================================= */
+
+/* Reset */
+.body * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body */
+.body {
+  font-family: var(--font-body), sans-serif;
+  font-size: 1.6rem;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}

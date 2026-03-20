@@ -1,0 +1,77 @@
+.banner {
+  padding: 10rem 0;
+  background: var(--black);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 30% 50%, rgba(201,168,76,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+.banner > :global(.container) { position: relative; z-index: 1; }
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 6vw, 8rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: 2.4rem;
+}
+.gold { color: var(--gold); }
+
+.sub {
+  font-size: 1.8rem;
+  color: rgba(255,255,255,0.5);
+  max-width: 54rem;
+  margin: 0 auto 4rem;
+  line-height: 1.7;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+}
+
+.btnWhatsapp,
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 1.4rem 3.2rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.btnWhatsapp ion-icon,
+.btnPrimary ion-icon { font-size: 1.8rem; }
+.btnWhatsapp {
+  background: #25D366;
+  color: var(--white);
+}
+.btnWhatsapp:hover {
+  background: #20ba58;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37,211,102,0.3);
+}
+.btnPrimary {
+  background: var(--gold);
+  color: var(--black);
+}
+.btnPrimary:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(201,168,76,0.35);
+}

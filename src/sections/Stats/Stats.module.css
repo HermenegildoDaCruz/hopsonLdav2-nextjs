@@ -1,0 +1,50 @@
+.stats {
+  padding: 8rem 0;
+  background: var(--gold);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  background: rgba(0,0,0,0.12);
+}
+
+.item {
+  background: var(--gold);
+  padding: 5rem 3.2rem;
+  text-align: center;
+  transition: background 0.25s;
+}
+.item:hover { background: var(--gold-light); }
+
+.number {
+  font-family: var(--font-display);
+  font-size: 7rem;
+  font-weight: 900;
+  color: var(--black);
+  line-height: 1;
+}
+.symbol {
+  font-size: 4rem;
+  vertical-align: super;
+  line-height: 0;
+}
+
+.label {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.55);
+  margin-top: 0.8rem;
+}
+
+/* Responsivo */
+@media (max-width: 62em) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 30em) {
+  .number { font-size: 5.5rem; }
+}

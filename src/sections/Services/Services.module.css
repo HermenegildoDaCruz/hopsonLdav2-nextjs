@@ -1,0 +1,160 @@
+.services {
+  padding: var(--section-pad);
+  background: var(--black);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Texto decorativo de fundo */
+.services::before {
+  content: 'SERVIÇOS';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-display);
+  font-size: 20rem;
+  font-weight: 900;
+  color: rgba(255,255,255,0.018);
+  white-space: nowrap;
+  pointer-events: none;
+  letter-spacing: -0.04em;
+}
+
+.services > :global(.container) { position: relative; z-index: 1; }
+
+/* Cabeçalho */
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 6rem;
+  gap: 2rem;
+}
+.label {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+.label::before {
+  content: '';
+  display: block;
+  width: 3rem; height: 2px;
+  background: var(--gold);
+}
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(3.6rem, 5vw, 6rem);
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: var(--white);
+}
+.gold { color: var(--gold); }
+.cta {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 1.2rem 2.8rem;
+  background: var(--gold);
+  color: var(--black);
+  border-radius: var(--radius);
+  transition: background 0.2s, transform 0.2s;
+  white-space: nowrap;
+}
+.cta:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+/* Grid de cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: var(--grey-border);
+}
+
+/* Card */
+.card {
+  background: var(--black-2);
+  padding: 5rem 4rem;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s;
+  cursor: default;
+}
+.card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.card:hover { background: var(--black-3); }
+.card:hover::after { transform: scaleX(1); }
+.card:hover .cardNum { color: var(--gold); }
+
+.cardNum {
+  font-family: var(--font-display);
+  font-size: 6rem;
+  font-weight: 900;
+  color: rgba(255,255,255,0.05);
+  line-height: 1;
+  margin-bottom: 2.4rem;
+  transition: color 0.3s;
+}
+.cardIcon {
+  font-size: 3.6rem;
+  margin-bottom: 2rem;
+  color: var(--gold);
+}
+.cardIcon ion-icon { font-size: 3.6rem; }
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 2.6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: 1.6rem;
+}
+.cardDesc {
+  font-size: 1.5rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.7;
+}
+.cardPrice {
+  margin-top: 3.2rem;
+  padding-top: 2.4rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.priceLabel {
+  display: block;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(255,255,255,0.3);
+}
+.priceValue {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin-top: 0.4rem;
+}
+
+/* Responsivo */
+@media (max-width: 62em) {
+  .grid { grid-template-columns: 1fr; gap: 1px; }
+  .header { flex-direction: column; align-items: flex-start; }
+}

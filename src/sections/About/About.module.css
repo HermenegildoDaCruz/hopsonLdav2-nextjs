@@ -1,0 +1,114 @@
+.about { padding: var(--section-pad); }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8rem;
+  align-items: center;
+}
+
+/* Imagem */
+.imgWrap {
+  position: relative;
+}
+.img {
+  width: 100%;
+  height: 55rem;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: var(--radius-lg);
+  filter: grayscale(15%);
+}
+.imgBadge {
+  position: absolute;
+  bottom: -3rem;
+  right: -3rem;
+  background: var(--gold);
+  padding: 2.4rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+.badgeNum {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--black);
+  line-height: 1;
+}
+.badgeText {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--black);
+  margin-top: 0.4rem;
+}
+
+/* Texto */
+.label {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.6rem;
+}
+.label::before {
+  content: '';
+  display: block;
+  width: 3rem; height: 2px;
+  background: var(--gold);
+}
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(3.6rem, 4vw, 5.6rem);
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  margin-bottom: 0;
+}
+.gold { color: var(--gold); }
+.body {
+  font-size: 1.7rem;
+  color: var(--text-sub);
+  line-height: 1.8;
+  margin-top: 2.4rem;
+}
+
+/* Pills */
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 3.2rem;
+}
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.7rem 1.6rem;
+  border: 1.5px solid var(--border);
+  border-radius: 10rem;
+  color: var(--text-sub);
+}
+.pill ion-icon { font-size: 1.6rem; color: var(--gold); }
+
+/* Responsivo */
+@media (max-width: 62em) {
+  .grid { grid-template-columns: 1fr; gap: 6rem; }
+  .imgWrap { order: -1; }
+  .img { height: 40rem; }
+  .imgBadge { right: 1rem; bottom: 1rem; }
+}

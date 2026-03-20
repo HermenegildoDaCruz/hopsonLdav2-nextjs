@@ -1,0 +1,33 @@
+.ticker {
+  background: var(--gold);
+  padding: 1.2rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.track {
+  display: inline-flex;
+  animation: ticker 28s linear infinite;
+}
+
+.item {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--black);
+  padding: 0 3.2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.item::after {
+  content: '✦';
+  opacity: 0.45;
+}
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
