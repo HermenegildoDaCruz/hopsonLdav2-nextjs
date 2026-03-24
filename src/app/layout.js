@@ -1,4 +1,5 @@
 import { Barlow_Condensed, Barlow } from 'next/font/google';
+import { Analytics } from "@vercel/analytics/next"
 import ScrollRevealProvider from '@/components/ScrollRevealProvider/ScrollRevealProvider';
 import '@/styles/variables.css';
 import styles from '@/styles/layout.module.css';
