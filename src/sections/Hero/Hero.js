@@ -2,14 +2,12 @@ import Image from 'next/image';
 import IonIcon from '@/components/IonIcon/IonIcon';
 import styles from './Hero.module.css';
 
-/**
- * Hero Section — primeira impressão impactante.
- * Usa a imagem do segurança com fundo negro.
- */
+export const encodedRequestServiceMessage = encodeURIComponent("Olá, tenho interesse em solicitar um orçamento para os serviços de segurança da Hopson.");
+
 export default function Hero() {
   return (
     <section className={styles.hero} id="hero">
-      {/* Imagem de fundo */}
+
       <div className={styles.bgImg}>
         <Image
           src="/hero-img.png"
@@ -20,7 +18,7 @@ export default function Hero() {
           quality={90}
         />
       </div>
-      {/* Overlay gradiente */}
+
       <div className={styles.overlay} />
 
       <div className={`container ${styles.content}`}>
@@ -39,7 +37,7 @@ export default function Hero() {
 
         <div className={styles.actions}>
           <a
-            href="https://wa.me/244928959382?text=Ol%C3%A1%2C+gostaria+de+solicitar+um+or%C3%A7amento."
+            href={`https://wa.me/244928959382?text=${encodedRequestServiceMessage}`}
             target="_blank"
             rel="noopener noreferrer"
             className={styles.btnPrimary}
@@ -52,8 +50,6 @@ export default function Hero() {
             <IonIcon name="arrow-forward" />
           </a>
         </div>
-
-        {/* Estatísticas rápidas */}
         <div className={styles.stats}>
           {[
             { num: '12+', label: 'Anos no mercado' },

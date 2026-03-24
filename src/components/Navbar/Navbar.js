@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import IonIcon from '@/components/IonIcon/IonIcon';
 import styles from './Navbar.module.css';
-
+import { encodedRequestServiceMessage } from '@/sections/Hero/Hero';
 /**
  * Navbar fixa com efeito de scroll e CTA que aparece ao rolar.
  */
@@ -42,7 +42,7 @@ export default function Navbar() {
         {/* CTA visível apenas após scroll */}
         {scrolled && (
           <a
-            href="https://wa.me/244928959382?text=Ol%C3%A1%2C+gostaria+de+solicitar+um+or%C3%A7amento."
+            href={`https://wa.me/244928959382?text=${encodedRequestServiceMessage}`}
             target="_blank"
             rel="noopener noreferrer"
             className={styles.cta}

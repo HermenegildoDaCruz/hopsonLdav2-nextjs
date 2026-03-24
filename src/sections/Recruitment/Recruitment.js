@@ -4,7 +4,7 @@ import styles from './Recruitment.module.css';
 const REQUIREMENTS = [
   { icon: 'calendar',      text: '<strong>Idade mínima:</strong> 24 anos' },
   { icon: 'school',        text: '<strong>Escolaridade:</strong> Mínimo 8ª classe' },
-  { icon: 'document-text', text: '<strong>Documentos:</strong> B.I., declaração de rendimento, 2 fotografias' },
+  { icon: 'document-text', text: '<strong>Documentos:</strong> B.I. e 2 fotografias' },
 ];
 
 const STEPS = [
@@ -13,6 +13,8 @@ const STEPS = [
   { num: '3', title: 'Formação & Integração', desc: 'Formação técnica e integração na equipa operacional' },
   { num: '4', title: 'Início de Funções',     desc: 'Colocação num posto de acordo com o perfil' },
 ];
+
+const encodedMessage = encodeURIComponent("Olá, tenho interesse em trabalhar como segurança na Hopson.");
 
 export default function Recruitment() {
   return (
@@ -44,7 +46,7 @@ export default function Recruitment() {
             </ul>
 
             <a
-              href="https://wa.me/244928959382?text=Ol%C3%A1%2C+tenho+interesse+em+trabalhar+como+segurança+na+Hopson."
+              href={`https://wa.me/244945969855?text=${encodedMessage}`}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.cta}
