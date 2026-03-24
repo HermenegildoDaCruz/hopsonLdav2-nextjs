@@ -6,11 +6,11 @@ import Link from 'next/link';
 import IonIcon from '@/components/IonIcon/IonIcon';
 import styles from './Navbar.module.css';
 import { encodedRequestServiceMessage } from '@/sections/Hero/Hero';
-/**
- * Navbar fixa com efeito de scroll e CTA que aparece ao rolar.
- */
+import { useMobileMenuContext } from '@/store/mobileMenuContext';
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const { showMobileMenu, toggleMobileMenu } = useMobileMenuContext();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 80);
@@ -39,7 +39,6 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* CTA visível apenas após scroll */}
         {scrolled && (
           <a
             href={`https://wa.me/244928959382?text=${encodedRequestServiceMessage}`}
@@ -51,14 +50,18 @@ export default function Navbar() {
             Solicitar Orçamento
           </a>
         )}
-
-        {/* Hambúrguer — controlado pelo MobileMenu via evento */}
         <button
           className={styles.hamburger}
           aria-label="Abrir menu"
-          onClick={() => window.dispatchEvent(new CustomEvent('openMobileMenu'))}
+          onClick={toggleMobileMenu}
         >
-          <IonIcon name="menu" className={styles.menuIcon} />
+          {
+            showMobileMenu ? (
+              <IonIcon name="close" className={styles.menuIcon} />
+            ) : (
+              <IonIcon name="menu" className={styles.menuIcon} />
+            )
+          }
         </button>
       </div>
     </nav>

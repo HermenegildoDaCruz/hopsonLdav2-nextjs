@@ -11,12 +11,15 @@ import Recruitment from '@/sections/Recruitment/Recruitment';
 import CTABanner from '@/sections/CTABanner/CTABanner';
 import Contact from '@/sections/Contact/Contact';
 import Footer from '@/components/Footer/Footer';
+import MobileMenuContextProvider from '@/store/mobileMenuContext';
 
 export default function Home() {
   return (
     <main>
-      <Navbar />
-      {/* <MobileMenu /> */}
+      <MobileMenuContextProvider>
+        <Navbar />
+        <MobileMenu />
+      </MobileMenuContextProvider>
       <Hero />
       <Ticker />
       <About />
