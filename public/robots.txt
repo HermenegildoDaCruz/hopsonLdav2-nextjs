@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://hopsonlda.vercel.app
+
+# Sitemaps
+Sitemap: https://hopsonlda.vercel.app/sitemap.xml
