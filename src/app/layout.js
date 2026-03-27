@@ -29,11 +29,18 @@ export const metadata = {
     description: '12 anos de excelência em segurança privada em Angola.',
     type: 'website',
   },
+  verification: {
+    google: '2CxRLP4Esjf-Rr3Uvn4-U5LP51xMW-DiAg1_f_etzGM',
+    // bing: 'your-bing-site-verification-code'," />
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="pt" className={`${barlowCondensed.variable} ${barlow.variable}`}>
+      <head>
+        <Analytics />
+      </head>
       <body className={styles.body}>
         <ScrollRevealProvider>
           {children}
