@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import IonIcon from '@/components/IonIcon/IonIcon';
 import styles from './Hero.module.css';
+import heroImg from '../../assets/hero-img.jpg';
+import { companyAge } from '@/utils/companyAge';
 
 export const encodedRequestServiceMessage = encodeURIComponent("Olá, tenho interesse em solicitar um orçamento para os serviços de segurança da Hopson.");
 
@@ -10,7 +12,7 @@ export default function Hero() {
 
       <div className={styles.bgImg}>
         <Image
-          src="/hero-img.png"
+          src={heroImg}
           alt="Agente de segurança Hopson"
           fill
           style={{ objectFit: 'cover', objectPosition: 'center top' }}
@@ -32,7 +34,7 @@ export default function Hero() {
 
         <p className={styles.subtitle}>
           Segurança patrimonial, escolta armada e proteção para eventos —
-          com 12 anos de excelência a guardar pessoas e patrimónios em Angola.
+          com {companyAge} anos de excelência a guardar pessoas e patrimónios em Angola.
         </p>
 
         <div className={styles.actions}>
@@ -52,7 +54,7 @@ export default function Hero() {
         </div>
         <div className={styles.stats}>
           {[
-            { num: '12+', label: 'Anos no mercado' },
+            { num: companyAge, label: 'Anos no mercado' },
             { num: '300+', label: 'Funcionários' },
             { num: '60+', label: 'Postos activos' },
           ].map(({ num, label }) => (
@@ -64,9 +66,8 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Badge redondo */}
       <div className={styles.badge} aria-hidden="true">
-        <span className={styles.badgeNum}>12</span>
+        <span className={styles.badgeNum}>{companyAge}</span>
         <span className={styles.badgeText}>anos de{'\n'}experiência</span>
       </div>
     </section>

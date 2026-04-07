@@ -13,6 +13,7 @@ import Contact from '@/sections/Contact/Contact';
 import Footer from '@/components/Footer/Footer';
 import MobileMenuContextProvider from '@/store/mobileMenuContext';
 
+
 export default function Home() {
   return (
     <main>

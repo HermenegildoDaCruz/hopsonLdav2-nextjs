@@ -1,16 +1,16 @@
 import styles from './Ticker.module.css';
+import { companyAge } from '@/utils/companyAge';
 
 const ITEMS = [
-  'Segurança Patrimonial',
-  'Escolta Armada',
-  'Segurança para Eventos',
-  '+12 Anos de Experiência',
-  '+300 Profissionais',
-  'Luanda · Bengo · Kwanza Norte',
-  'Ícolo e Bengo',
-];
+    'Segurança Patrimonial',
+    'Escolta Armada',
+    'Segurança para Eventos',
+    `+${companyAge} Anos de Experiência`,
+    '+300 Profissionais',
+    'Luanda · Bengo · Kwanza Norte',
+    'Ícolo e Bengo',
+  ];
 
-/** Faixa animada com os serviços principais — duplicada para loop infinito */
 export default function Ticker() {
   const doubled = [...ITEMS, ...ITEMS];
 

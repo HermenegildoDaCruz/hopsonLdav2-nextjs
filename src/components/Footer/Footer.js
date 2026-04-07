@@ -1,26 +1,25 @@
 import Image from 'next/image';
 import IonIcon from '@/components/IonIcon/IonIcon';
 import styles from './Footer.module.css';
+import { companyAge } from '@/utils/companyAge';
 
 export default function Footer() {
-  const year = new Date().getFullYear();
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className={styles.footer}>
       <div className="container">
         <div className={styles.grid}>
-          {/* Brand */}
           <div className={styles.brand}>
             <div className={styles.logo}>
               <Image src="/favicon.png" alt="Hopson" width={50} height={50} />
               <span className={styles.logoText}>Hopson</span>
             </div>
             <p className={styles.desc}>
-              Hopson Segurança e Prestação de Serviços — protegendo pessoas e patrimónios em Angola há mais de 12 anos.
+              Hopson Segurança e Prestação de Serviços — protegendo pessoas e patrimónios em Angola há mais de {companyAge} anos.
             </p>
           </div>
 
-          {/* Serviços */}
           <div>
             <div className={styles.colTitle}>Serviços</div>
             <ul className={styles.links}>
@@ -31,7 +30,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Empresa */}
+
           <div>
             <div className={styles.colTitle}>Empresa</div>
             <ul className={styles.links}>
@@ -42,7 +41,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contacto */}
           <div>
             <div className={styles.colTitle}>Contacto</div>
             <ul className={styles.contactList}>
@@ -67,7 +65,7 @@ export default function Footer() {
         </div>
 
         <div className={styles.bottom}>
-          <p className={styles.copy}>© {year} Hopson Segurança e Prestação de Serviços, Lda. Todos os direitos reservados.</p>
+          <p className={styles.copy}>© {currentYear} Hopson Segurança e Prestação de Serviços, Lda. Todos os direitos reservados.</p>
           <span className={styles.badge}>Empresa Licenciada · Angola</span>
         </div>
       </div>

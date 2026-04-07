@@ -1,13 +1,12 @@
 import styles from './Stats.module.css';
+import { companyAge } from '@/utils/companyAge';
 
 const STATS = [
-  { num: '12', symbol: '+', label: 'Anos no Mercado' },
-  { num: '300', symbol: '+', label: 'Funcionários' },
-  { num: '60', symbol: '+', label: 'Postos Activos' },
-  { num: '4', symbol: '',  label: 'Províncias' },
+    { num: companyAge, symbol: '', label: 'Anos no Mercado' },
+    { num: '300', symbol: '+', label: 'Funcionários' },
+    { num: '60', symbol: '+', label: 'Postos Activos' },
+    { num: '4', symbol: '',  label: 'Províncias' },
 ];
-
-/** Faixa de estatísticas em fundo dourado */
 export default function Stats() {
   return (
     <section className={styles.stats}>

@@ -1,13 +1,14 @@
 import Image from 'next/image';
 import IonIcon from '@/components/IonIcon/IonIcon';
 import styles from './About.module.css';
+import { companyAge,foundingYear } from '@/utils/companyAge';
 
 const PILLS = [
-  { icon: 'business',       label: 'Empresa Angolana' },
-  { icon: 'location',       label: 'Luanda & Arredores' },
-  { icon: 'shield-checkmark', label: 'Licenciada' },
-  { icon: 'people',         label: '+12 Anos' },
-];
+    { icon: 'business',       label: 'Empresa Angolana' },
+    { icon: 'location',       label: 'Luanda & Arredores' },
+    { icon: 'shield-checkmark', label: 'Licenciada' },
+    { icon: 'people',         label: `+${companyAge} Anos` },
+  ];
 
 export default function About() {
   return (
@@ -23,7 +24,7 @@ export default function About() {
               className={styles.img}
             />
             <div className={styles.imgBadge}>
-              <span className={styles.badgeNum}>2012</span>
+              <span className={styles.badgeNum}>{foundingYear}</span>
               <span className={styles.badgeText}>Fundada em Angola</span>
             </div>
           </div>
@@ -34,7 +35,7 @@ export default function About() {
               Guardiões da <span className={styles.gold}>sua</span> segurança
             </h2>
             <p className={styles.body}>
-              A <strong>Hopson Segurança e Prestação de Serviços</strong> é uma empresa angolana com mais de 12 anos dedicados à protecção de pessoas e bens patrimoniais públicos e privados.
+              A <strong>Hopson Segurança e Prestação de Serviços</strong> é uma empresa angolana com mais de {companyAge} anos dedicados à protecção de pessoas e bens patrimoniais públicos e privados.
             </p>
             <p className={styles.body}>
               Com sede em Luanda, actuamos com rigor técnico, ética profissional e soluções adaptadas a cada cliente — de residências particulares a grandes eventos empresariais.
