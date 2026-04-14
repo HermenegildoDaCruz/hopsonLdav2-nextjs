@@ -1,7 +1,9 @@
+'use client'
 import Image from 'next/image';
 import IonIcon from '@/components/IonIcon/IonIcon';
 import styles from './About.module.css';
 import { companyAge,foundingYear } from '@/utils/companyAge';
+import { useEffect, useState } from 'react';
 
 const PILLS = [
     { icon: 'business',       label: 'Empresa Angolana' },
@@ -10,14 +12,37 @@ const PILLS = [
     { icon: 'people',         label: `+${companyAge} Anos` },
   ];
 
+const aboutImages = [
+  '/hopson-img-3.jpeg',
+  '/hopson-img.jpg',
+  '/hopson-img-1.jpeg',
+]
+
 export default function About() {
+  // const [aboutImagesIndex, setAboutImagesIndex] = useState(0)
+
+  // console.log(aboutImagesIndex)
+  // useEffect(() => {
+  //   let timer
+    
+  //   if (aboutImagesIndex < aboutImages.length){
+  //     timer = setTimeout(() => {
+  //     setAboutImagesIndex(prevIndex => prevIndex + 1)
+  //   }, 3000);
+  //   }
+
+  //   if (aboutImagesIndex === aboutImages.length){
+  //     setAboutImagesIndex(0)
+  //     clearTimeout(timer)
+  //   }
+  // }, [aboutImagesIndex])
   return (
     <section className={styles.about} id="sobre">
       <div className="container">
         <div className={styles.grid}>
           <div className={`${styles.imgWrap} reveal-left`}>
             <Image
-              src="/hopson-img.jpg"
+              src={aboutImages[1]}
               alt="Agente de segurança Hopson em serviço"
               width={600}
               height={550}
