@@ -10,6 +10,8 @@ Landing page institucional da **Hopson Segurança e Prestação de Serviços**, 
 - **JavaScript** 
 - **CSS Modules** — estilização encapsulada por componente
 - **Google Fonts** — Barlow Condensed + Barlow (via `next/font`)
+- **Shadcn - Radix** — Biblioteca de UI
+
 
 ---
 
@@ -22,11 +24,13 @@ src/
 │   └── page.js            # Página principal (monta todas as sections)
 │
 ├── components/            # Componentes reutilizáveis
-│   ├── Navbar/
-│   ├── MobileMenu/
-│   ├── Ticker/
 │   ├── Footer/
-│   └── ScrollRevealProvider/
+│   ├── Navbar/
+│   ├── IonIcon/
+│   ├── MobileMenu/
+│   ├── ScrollRevealProvider/
+│   ├── Ticker/
+    ├── ui/
 │
 ├── sections/              # Secções da landing page (ordem da página)
 │   ├── Hero/
