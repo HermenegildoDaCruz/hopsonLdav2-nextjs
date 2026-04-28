@@ -3,6 +3,8 @@
    Importar no global CSS ou layout raiz
    ============================================================= */
 
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@400;600;700;800;900&display=swap");
+
 :root {
   /* --- Paleta Principal --- */
   --black:      #0a0a0a;

@@ -3,7 +3,13 @@ import Image from 'next/image';
 import IonIcon from '@/components/IonIcon/IonIcon';
 import styles from './About.module.css';
 import { companyAge,foundingYear } from '@/utils/companyAge';
-import { useEffect, useState } from 'react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 
 const PILLS = [
     { icon: 'business',       label: 'Empresa Angolana' },
@@ -13,47 +19,30 @@ const PILLS = [
   ];
 
 const aboutImages = [
-  '/hopson-img-3.jpeg',
-  '/hopson-img.jpg',
-  '/hopson-img-1.jpeg',
+  '/images/hopson-img-1.jpeg',
+  '/images/hopson-img-2.jpeg',
+  '/images/hopson-img-3.jpg',
 ]
 
 export default function About() {
-  // const [aboutImagesIndex, setAboutImagesIndex] = useState(0)
-
-  // console.log(aboutImagesIndex)
-  // useEffect(() => {
-  //   let timer
-    
-  //   if (aboutImagesIndex < aboutImages.length){
-  //     timer = setTimeout(() => {
-  //     setAboutImagesIndex(prevIndex => prevIndex + 1)
-  //   }, 3000);
-  //   }
-
-  //   if (aboutImagesIndex === aboutImages.length){
-  //     setAboutImagesIndex(0)
-  //     clearTimeout(timer)
-  //   }
-  // }, [aboutImagesIndex])
   return (
     <section className={styles.about} id="sobre">
       <div className="container">
         <div className={styles.grid}>
-          <div className={`${styles.imgWrap} reveal-left`}>
-            <Image
-              src={aboutImages[1]}
-              alt="Agente de segurança Hopson em serviço"
-              width={600}
-              height={550}
-              className={styles.img}
-            />
-            <div className={styles.imgBadge}>
-              <span className={styles.badgeNum}>{foundingYear}</span>
-              <span className={styles.badgeText}>Fundada em Angola</span>
-            </div>
-          </div>
-
+          <Carousel>
+              <CarouselContent>
+                {aboutImages.map(img =><CarouselItem> <Image
+                  src={img}
+                  key={img}
+                  alt="Agente de segurança Hopson em serviço"
+                  width={600}
+                  height={550}
+                  className={styles.img}
+                /></CarouselItem>)}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
           <div className={`${styles.text} reveal-right`}>
             <p className={styles.label}>Quem somos</p>
             <h2 className={styles.title}>

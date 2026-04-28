@@ -1,23 +1,8 @@
-import { Barlow_Condensed, Barlow } from 'next/font/google';
 import { Analytics } from "@vercel/analytics/next"
 import ScrollRevealProvider from '@/components/ScrollRevealProvider/ScrollRevealProvider';
 import '@/styles/variables.css';
 import styles from '@/styles/layout.module.css';
 import '@/styles/globals.css'; 
-
-const barlowCondensed = Barlow_Condensed({
-  subsets: ['latin'],
-  weight: ['400', '600', '700', '800', '900'],
-  variable: '--font-display',
-  display: 'swap',
-});
-
-const barlow = Barlow({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600'],
-  variable: '--font-body',
-  display: 'swap',
-});
 
 export const metadata = {
   title: 'Hopson Segurança | Protegemos o que mais importa',
@@ -37,7 +22,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt" className={`${barlowCondensed.variable} ${barlow.variable}`}>
+    <html lang="pt">
       <head>
         <Analytics />
       </head>
