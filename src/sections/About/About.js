@@ -52,7 +52,7 @@ export default function About() {
               A <strong>Hopson Segurança e Prestação de Serviços</strong> é uma empresa angolana com mais de {companyAge} anos dedicados à protecção de pessoas e bens patrimoniais públicos e privados.
             </p>
             <p className={styles.body}>
-              Com sede em Luanda, actuamos com rigor técnico, ética profissional e soluções adaptadas a cada cliente — de residências particulares a grandes eventos empresariais.
+              Com sede em Luanda, actuamos com rigor técnico, ética profissional e soluções adaptadas a cada cliente, residências particulares a grandes eventos empresariais.
             </p>
             <div className={styles.pills}>
               {PILLS.map(({ icon, label }) => (
