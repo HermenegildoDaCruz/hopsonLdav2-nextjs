@@ -33,7 +33,7 @@ export default function Hero() {
         </h1>
 
         <p className={styles.subtitle}>
-          Segurança patrimonial, escolta armada e proteção para eventos —
+          Segurança patrimonial, escolta armada e proteção para eventos,
           com {companyAge} anos de excelência a guardar pessoas e patrimónios em Angola.
         </p>
 
