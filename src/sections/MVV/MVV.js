@@ -26,7 +26,7 @@ export default function MVV() {
             <div className={styles.cardLabel}>Missão</div>
             <h3 className={styles.cardTitle}>O que fazemos</h3>
             <p className={styles.cardText}>
-              Oferecer serviços de segurança de qualidade, de forma ética e com rigor técnico — proporcionando soluções eficazes e inovadoras, adaptadas às necessidades específicas de cada cliente.
+              Oferecer serviços de segurança de qualidade, de forma ética e com rigor técnico, proporcionando soluções eficazes e inovadoras, adaptadas às necessidades específicas de cada cliente.
             </p>
           </div>
 
