@@ -16,7 +16,7 @@ export default function Footer() {
               <span className={styles.logoText}>Hopson</span>
             </div>
             <p className={styles.desc}>
-              Hopson Segurança e Prestação de Serviços — protegendo pessoas e patrimónios em Angola há mais de {companyAge} anos.
+              Hopson Segurança e Prestação de Serviços -> protegendo pessoas e patrimónios em Angola há mais de {companyAge} anos.
             </p>
           </div>
 
