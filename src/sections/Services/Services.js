@@ -23,7 +23,7 @@ const SERVICES = [
     num: '03',
     icon: 'people',
     title: 'Segurança para Eventos',
-    desc: 'Equipa especializada para concertos, conferências, casamentos e eventos corporativos — garantindo ordem e protecção.',
+    desc: 'Equipa especializada para concertos, conferências, casamentos e eventos corporativos, garantindo ordem e protecção.',
     priceLabel: 'Valor',
     priceValue: 'Conforme dimensão',
   },
